@@ -31,7 +31,7 @@ if columnas_one_hot and scaler and model:
     # Basado en la lista: ['Felder_equilibrio', 'Felder_intuitivo', 'Felder_reflexivo', 'Felder_secuencial', 'Felder_sensorial', 'Felder_verbal', 'Felder_visual']
     categorias_felder = [col.replace('Felder_', '') for col in columnas_one_hot if col.startswith('Felder_')]
 
-    felder_selected = st.selectbox("Estilo de Aprendizaje (Felder)", opciones=categorias_felder)
+    felder_selected = st.selectbox("Estilo de Aprendizaje (Felder)", options=categorias_felder)
     examen_admision = st.slider("Nota de Examen de Admisión", min_value=0.0, max_value=5.0, value=3.8, step=0.05)
 
     if st.button("Calcular Predicción"):
